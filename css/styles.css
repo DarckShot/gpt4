@@ -141,7 +141,7 @@ p {
   max-width: 1440px;
   margin: 0 2rem;
   width: 100%;
-  padding: 2rem 4rem 2rem 4rem ;
+  padding: 2rem 2rem 2rem 4rem ;
   position: fixed;
   justify-content: space-between;
   align-items: center;
@@ -728,11 +728,6 @@ p {
 /* Медиа запросы для адаптива */
 
 @media screen and (max-width: 1024px) {
-  .page{
-    padding: 0 2rem;
-    width: 100%;
-    max-width: 1024px;
-  }
 
   .header .header__logo .logo__link img {
     width: 200%;
@@ -826,30 +821,58 @@ p {
   }
 
   .registration_info{
-    padding: 4rem;
-    margin: 6rem;
+    width: 100%;
+    padding: 4rem 0 ;
+    margin: 6rem 0;
     gap: 3rem; 
   } 
 
+  .news{
+    height: auto;
+    display: flex; 
+    align-items: center;  
+    margin: 0 18%;  
+    padding: 0 2rem;
+  }
+
   .blog-item.news_1{
-    margin-left: 48rem;
-    width: 30%;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .blog-item.news .blog-item.news_1 img{
+    padding-bottom: 4rem;
+    width: 100%;
+  }
+
+  .blog-item.news img{
+    width: 100%;
   }
 
   .blog-item.news{
-    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
     padding: 0;
-    width: 40%;
+    margin: 0;
   }
 
   .blog-container-mini{
-    padding-left: 0;
-    margin: 0;
-    gap: 50px;
+    flex-direction: column;
   }
 
   .blog-container{
     gap: 0px;
+    flex-direction: column
+  }
+
+  .blog-row{
+    flex-direction: column
   }
 
   .date{
@@ -860,17 +883,35 @@ p {
     font-size: 16px;
   }
 
-  .news{
-    width: 28%;
-    padding: 0 2rem;
+  .category_links{
+    display: flex;
+    gap: 10%;
+    font-size: 12px;
   }
+
+  .date{
+    font-size: 14px;
+  }
+
+  .name_news{
+    font-size: 16px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
+  .header{
+    margin: 0;
+    padding: 2rem 2rem;
+    width: 100%;
+
+  }
+
   p {
     font-size: 14px;
     line-height: 1.5;
   }
+
   h1 {
     font-size: 46px;
   }
@@ -881,6 +922,10 @@ p {
 
   h3 {
     font-size: 19px;
+  }
+
+  .blog .top__header{
+    width: 100%;
   }
 
   .hero_section {
@@ -960,53 +1005,15 @@ p {
   .registration_info{
     flex-direction: column;
     text-align: center;
-    width: 120%;
+    width: 100%;
     padding: 3rem;
     margin: 0;
     margin-bottom: 2rem;
     gap: 1rem; 
   } 
 
-  .news{
-    display: flex; 
-    align-items: center;  
-    margin: 0 18%;  
-    padding: 0 2rem;
-  }
-
-  .blog-item.news_1{
-    width: 100%;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 50px;
-  }
-
-  .blog-item.news img{
-    width: 25rem;
-  }
-
-  .blog-item.news{
-    width: 100%;
-    height: 100%;
-    display: flex; 
-    align-items: center;
+  .blog-container-mini .blog-row .blog-container{
     flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  .blog-container-mini{
-    flex-direction: column;
-  }
-
-  .blog-container{
-    gap: 0px;
-    flex-direction: column
-  }
-
-  .blog-row{
-    flex-direction: column
   }
 
   .date{
@@ -1015,6 +1022,10 @@ p {
 
   .name_news{
     font-size: 16px;
+  }
+
+  .step_into_future{
+    width: 100%;
   }
 
   .category_links{
@@ -1026,10 +1037,6 @@ p {
 }
 
 @media screen and (max-width: 765px) {
-  .header{
-    width: 100%;
-  }
-
   a {
     font-size: 12px;
   }
@@ -1137,4 +1144,5 @@ p {
     flex-direction: column;
     gap: 2rem;
   }
+  
 }
