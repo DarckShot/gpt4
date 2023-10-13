@@ -1050,6 +1050,16 @@ p {
   h2 {
     font-size: 19px;
   }
+  
+  .header .header__right {
+    flex-direction: column;
+    padding-top: 10rem;
+    justify-content: flex-start;
+  }
+
+  .menu__close {
+    left: 10rem;
+  }
 
   .hero_section .hero_section__left .left__cta_buttons input[type="text"] {
     min-width: auto;
