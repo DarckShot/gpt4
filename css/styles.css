@@ -902,9 +902,7 @@ p {
 @media screen and (max-width: 768px) {
   .header{
     margin: 0;
-    padding: 2rem 2rem;
     width: 100%;
-
   }
 
   p {
