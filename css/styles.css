@@ -141,7 +141,7 @@ p {
   max-width: 1440px;
   margin: 0 2rem;
   width: 100%;
-  padding: 2rem 2rem 2rem 4rem ;
+  padding: 2rem 4rem 2rem 4rem ;
   position: fixed;
   justify-content: space-between;
   align-items: center;
