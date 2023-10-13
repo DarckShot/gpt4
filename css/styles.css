@@ -1,0 +1,1140 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "ManropeBold";
+  src: url(../fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ManropeLight";
+  src: url(../fonts/Manrope-Light.ttf);
+}
+
+/* Сброс базовых стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+}
+
+/* Общие стили для всего приложения */
+
+body {
+  background: #061F3A;
+  overflow: auto;
+  padding: 0;
+}
+
+body.oh {
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #ae67fa;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ae67fa;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1,
+h2 {
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "ManropeBold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #ff4820;
+}
+
+.section {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.lined_header {
+  background: url("../assets/img/gradient_line.svg") no-repeat 0 0 transparent;
+  padding: 1rem 0;
+}
+
+/* Стили для Шапки */
+
+.header {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 2rem;
+  width: 100%;
+  padding: 2rem 4rem 2rem 4rem ;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: #031b34;
+  z-index: 9999;
+
+}
+
+.header .header__logo .logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__menu .menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.header .header__right.hidden {
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.header .header__right .menu__close {
+  width: 38px;
+  height: 38px;
+}
+
+.header .header__right .menu__close.hidden {
+  display: none;
+}
+
+.header .header__menu .menu .menu__item a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.header .header__menu .menu .menu__item:hover a {
+  border-bottom-color: #fff;
+}
+
+.header .header__menu .menu .menu__item.active a {
+  color: #f49867;
+  border-bottom-color: #f49867;
+}
+
+.header .header__burger_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header .header__burger_menu.hidden {
+  display: none;
+}
+
+.header .header__burger_menu .burger_menu__line,
+.header .header__right .menu__close .menu__line {
+  width: 43px;
+  height: 5px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.header .header__right .menu__close .menu__line:nth-child(1) {
+  position: relative;
+  top: 15px;
+  right: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.header .header__right .menu__close .menu__line:nth-child(2) {
+  position: relative;
+  top: 10px;
+  right: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.header .cta_buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+/* Стили для первого экрана (Хиро секция) */
+
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  /* min-height: 60vh; */
+  margin: 14rem 0 3rem;
+}
+
+.hero_section .hero_section__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+.hero_section .hero_section__left .left__description {
+  color: #81afdd;
+}
+
+.hero_section .hero_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
+}
+
+.hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.hero_section .hero_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.hero_section .hero_section__right {
+  height: 100%;
+}
+
+.hero_section .hero_section__right img {
+  width: 100%;
+}
+
+/* Секция брендов */
+
+.brands_section {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 6rem 0;
+  column-gap: 3rem;
+}
+
+/* Что такое Chat GPT */
+
+.what_is_chatgpt_section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 6rem 0;
+  row-gap: 7rem;
+  background: url(../assets/img/what_is_gpt_3_bg.svg) no-repeat 0 0 / cover;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__header {
+  flex: 30%;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__content {
+  flex: 65%;
+  color: #81afdd;
+  font-size: 14px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+  width: 500px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a {
+  color: #ff8a71;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 2rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.what_is_chatgpt_section
+  .what_is_chatgpt_section__bottom
+  .bottom__container
+  .container__content {
+  color: #81afdd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Будущее наступило */
+
+.future_here {
+  display: flex;
+  column-gap: 6rem;
+  margin: 6rem 0 2rem;
+}
+
+.future_here .future_here__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+  flex: 2;
+}
+
+/* .future_here .future_here__left .left__header {
+} */
+
+.future_here .future_here__left .left__cta {
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+}
+
+.future_here .future_here__left a:hover {
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.future_here .future_here__right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.future_here .future_here__right .right__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future_here .future_here__right .right__container .container__header {
+  width: 35%;
+}
+
+.future_here .future_here__right .right__container .container__content {
+  width: 55%;
+  color: #81afdd;
+}
+
+/* ДЗ 1 */
+
+.exceeding_expectations{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exceeding_expectations .exceeding_expectations_right{
+  padding: 5rem 0 0 19px;
+  width: 479px;
+  height: 334px;
+}
+
+.exceeding_expectations .exceeding_expectations_right .container__content.early_access {
+  color: #81afdd;
+}
+
+.exceeding_expectations .exceeding_expectations_right .left__header {
+  padding-top: 10px;
+  padding-bottom: 23px;
+}
+
+.exceeding_expectations .exceeding_expectations_right .container__content {
+  color: #81afdd;
+  line-height: 30px;
+}
+
+.exceeding_expectations .exceeding_expectations_right .right__cta {
+  font-size: 16px;
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  bottom: -31px;
+}
+
+.registration_info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72rem;
+  margin: 6rem 4rem;
+  padding: 40px;
+  gap: 15rem;
+  background: url(../assets/img/registration_info_image.svg) no-repeat 0 0 / cover;
+}
+
+.registration_info .registration_info_right .cta_buttons.go_btn{
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 40px;
+  width: 190px;
+  height: 60px;
+  font-size: 18px;
+  
+}
+
+.registration_info .registration_info_left .container__content.early_acces {
+  color: #000000;
+}
+
+.registration_info .registration_info_left .registration-message {
+  color: #000000;
+  text-decoration: none;
+  width: 600px; 
+  line-height: 35px;
+
+}
+
+.blog{
+  z-index: 1;
+  padding-bottom: 130px;
+}
+
+.blog .top__header{
+  width: 720px;
+  padding-bottom: 5rem;
+}
+
+.blog-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px; 
+}
+
+.blog-container-mini{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.blog-row{
+  display: flex;
+  gap: 50px;
+}
+
+.container__text.text_news_1{
+  padding: 30px 25px;
+}
+
+.container__text.text_news{
+  padding: 5px 20px;
+}
+
+.blog-item.news img{
+  width: 300px;
+}
+
+
+.blog-item.news_1{
+  padding: 0;
+  background-color: #042C54;
+  width: 400px;
+  height: 680px;
+  clip-path: 
+    polygon(
+      0% 5%,     /* верхняя левая */
+      10% 0%,     /* верхняя левая */
+      100% 0%,    /* верхняя правая */
+      100% 100%,   /* верхняя правая */
+      100% 100%,  /* нижняя правая */
+      100% 100%,  /* нижняя правая */
+      100% 100%,   /* нижняя левая */
+      0 100%      /* нижняя левая */
+    );
+} 
+
+.date, .continue_news {
+  font-size: 12px;
+}
+
+.blog-item .container__text.text_news .name_news{
+  font-size: 19px;
+}
+
+.blog .blog-container .blog-row .blog-item.news_1 img{
+  width: 400px;
+  margin: 0;
+}
+
+.blog-item{
+  width: 300px;
+  height: 315px;
+  padding: 0;
+  background-color: #042C54;
+}
+
+.name_news{
+  padding-bottom: 18%;
+}
+
+.name_news_1{
+  padding-bottom: 60%;
+}
+
+.blog-item.news{
+  clip-path: 
+    polygon(
+      0% 10%,     /* верхняя левая */
+      10% 0%,     /* верхняя левая */
+      100% 0%,    /* верхняя правая */
+      100% 100%,   /* верхняя правая */
+      100% 100%,  /* нижняя правая */
+      100% 100%,  /* нижняя правая */
+      100% 100%,   /* нижняя левая */
+      0 100%      /* нижняя левая */
+    );
+}
+
+.footer{
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #031B34;
+}
+
+.cta_buttons.early_access_btn{
+  margin-bottom: 9rem;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 20px 50px;
+  cursor: pointer;
+  width: 337px;
+  text-align: center;
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #fff;
+}
+
+.step_into_future{
+  text-align: center;
+  width: 780px;
+}
+
+.footer .step_into_future .top__header.footer_text{
+  line-height: 75px;
+  padding: 12rem 0 6rem 0;
+}
+
+.footer_menu{
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 150px; 
+  
+}
+
+.category_links{
+  display: flex;
+  gap: 130px;
+  font-size: 12px;
+}
+
+.adress_documentation{
+  width: 186px;
+} 
+
+
+.text_in_footer{
+  font-size: 12px;
+  display: flex;
+  gap: 150px;
+  font-weight: 300;
+  width: 140px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.compay{
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.category-title{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.adress_documentation img{
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+.adress_documentation{
+  width: 190px;
+}
+
+.contacts{
+  width: 134px;
+}
+
+.сopyright_footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Медиа запросы для адаптива */
+
+@media screen and (max-width: 1024px) {
+  .page{
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  .header .header__logo .logo__link img {
+    width: 200%;
+  }
+
+  .header .header__right {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: #031b34;
+  }
+
+  .header .header__menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header .header__menu .menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .header .header__menu .menu__close {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+  }
+
+  .header .header__menu .menu .menu__item a {
+    font-size: 48px;
+  }
+
+  .hero_section {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 0;
+    /* margin: 0; */
+    width: 90%;
+  }
+
+  .hero_section .hero_section__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero_section .hero_section__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 60%;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons {
+    justify-content: center;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 4rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+    row-gap: 0;
+  }
+
+  .future_here {
+    column-gap: 0;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  .future_here .future_here__left {
+    row-gap: 1rem;
+  }
+
+  .registration_info{
+    padding: 4rem;
+    margin: 6rem;
+    gap: 3rem; 
+  } 
+
+  .blog-item.news_1{
+    margin-left: 48rem;
+    width: 30%;
+  }
+
+  .blog-item.news{
+    margin-left: 0;
+    padding: 0;
+    width: 40%;
+  }
+
+  .blog-container-mini{
+    padding-left: 0;
+    margin: 0;
+    gap: 50px;
+  }
+
+  .blog-container{
+    gap: 0px;
+  }
+
+  .date{
+    font-size: 14px;
+  }
+
+  .name_news{
+    font-size: 16px;
+  }
+
+  .news{
+    width: 28%;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  .hero_section {
+    width: 100%;
+  }
+
+  .brands_section {
+    margin-top: -15px;
+    padding-bottom: 0;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__top {
+    flex-direction: column;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 85%;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+    width: auto;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    flex-direction: column;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    row-gap: 2rem;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 3rem;
+  }
+
+  .what_is_chatgpt_section {
+    margin: 6rem 0 0;
+  }
+
+  .what_is_chatgpt_section
+    .what_is_chatgpt_section__bottom
+    .bottom__container
+    .container__content {
+    line-height: 1.5;
+  }
+
+  .exceeding_expectations{
+    margin: 2rem;
+    flex-direction: column;
+  }
+
+  .exceeding_expectations .exceeding_expectations_right{
+    padding: 2rem 0 0 0px;
+    font-size: 10em;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container__content{
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .exceeding_expectations .exceeding_expectations_right .right__cta {
+    bottom: -20px;
+  }
+
+  .container__content.early_acces{
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .registration_info{
+    flex-direction: column;
+    text-align: center;
+    width: 120%;
+    padding: 3rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    gap: 1rem; 
+  } 
+
+  .news{
+    display: flex; 
+    align-items: center;  
+    margin: 0 18%;  
+    padding: 0 2rem;
+  }
+
+  .blog-item.news_1{
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .blog-item.news img{
+    width: 25rem;
+  }
+
+  .blog-item.news{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blog-container-mini{
+    flex-direction: column;
+  }
+
+  .blog-container{
+    gap: 0px;
+    flex-direction: column
+  }
+
+  .blog-row{
+    flex-direction: column
+  }
+
+  .date{
+    font-size: 14px;
+  }
+
+  .name_news{
+    font-size: 16px;
+  }
+
+  .category_links{
+    display: flex;
+    gap: 10%;
+    font-size: 12px;
+  }
+  
+}
+
+@media screen and (max-width: 765px) {
+  .header{
+    width: 100%;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+    min-width: auto;
+  }
+
+  .future_here {
+    row-gap: 3rem;
+  }
+
+  .future_here .future_here__right .right__container {
+    flex-direction: column;
+  }
+
+  .future_here .future_here__right .right__container .container__header {
+    width: 100%;
+  }
+
+  .future_here .future_here__right .right__container .container__content {
+    width: 100%;
+  }
+
+  .future_here .future_here__right {
+    row-gap: 2rem;
+  }
+
+  .exceeding_expectations_left{
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали по центру */
+    justify-content: center;
+  }
+
+  .exceeding_expectations_left img{
+    width: 80%;
+  }
+
+  .exceeding_expectations_right{
+    margin: 3rem 0;
+  }
+  
+  .registration_info .registration_info_left .registration-message {
+    display: flex;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    
+  }
+
+  .registration_info{
+    display: flex;
+    align-items: center;    
+    width: 150%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cta_buttons.go_btn{
+    margin-bottom: 2rem;
+  }
+
+  .blog .top__header{
+    height: auto;
+    width: 300px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .news{
+    width: 200px;
+    display: flex; 
+    align-items: center;    
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
+  .blog-item.news_1{
+    width: 90%;
+  }
+
+  .blog-item.news{
+    width: 90%;
+  }
+
+  .step_into_future{
+    width: 80%;
+  }
+
+  .category_links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
