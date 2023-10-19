@@ -486,7 +486,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 72rem;
+  width: 100%;
+  height: 12rem;
   margin: 6rem 4rem;
   padding: 40px;
   gap: 15rem;
@@ -565,7 +566,7 @@ p {
   padding: 0;
   background-color: #042C54;
   width: 400px;
-  height: 680px;
+  height: 100%;
   clip-path: 
     polygon(
       0% 5%,     /* верхняя левая */
@@ -588,7 +589,7 @@ p {
 }
 
 .blog .blog-container .blog-row .blog-item.news_1 img{
-  width: 400px;
+  width: 100%;
   margin: 0;
 }
 
@@ -825,7 +826,6 @@ p {
   }
 
   .registration_info{
-    width: 100%;
     padding: 4rem 0 ;
     margin: 6rem 0;
     gap: 3rem; 
@@ -1008,6 +1008,7 @@ p {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    height: 100%;
     padding: 3rem;
     margin: 0;
     margin-bottom: 2rem;
@@ -1125,7 +1126,7 @@ p {
   .registration_info{
     display: flex;
     align-items: center;    
-    width: 150%;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
@@ -1147,12 +1148,6 @@ p {
 
   .step_into_future{
     width: 80%;
-  }
-
-  .registration_info{
-    margin: 0;
-    padding: 0;
-    width: 100%;
   }
   
   .registration-message{
