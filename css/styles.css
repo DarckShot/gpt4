@@ -450,6 +450,10 @@ p {
   align-items: center;
 }
 
+.exceeding_expectations_left img{
+  width: 546px;
+}
+
 .exceeding_expectations .exceeding_expectations_right{
   padding: 5rem 0 0 19px;
   width: 479px;
@@ -1137,6 +1141,10 @@ p {
     padding-bottom: 1rem;
   }
 
+  .footer .step_into_future .top__header.footer_text {
+    line-height: 150%;
+}
+
   .step_into_future{
     width: 80%;
   }
@@ -1166,9 +1174,27 @@ p {
   }
 
   .category_links{
-    display: flex;
+    text-align: center;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
   }
-  
+
+  .category_links p{
+    font-size: 150%;
+  }
+
+  .adress_documentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts{
+    align-items: center;
+  }
+
+  .text_in_footer {
+    flex-direction: column;
+}
 }
