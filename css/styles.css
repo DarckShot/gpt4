@@ -1067,7 +1067,7 @@ p {
 
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 426px) {
   a {
     font-size: 12px;
   }
